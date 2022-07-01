@@ -4,7 +4,7 @@
 
 /**
 *main - assign a random number to the variable n each time it is executed
-*print whether the number stored in the variable n is positive or negative
+*based a condition, print whether the number stored in the variable n is positive or negative
 *Return: always 0 (success)
 */
 
