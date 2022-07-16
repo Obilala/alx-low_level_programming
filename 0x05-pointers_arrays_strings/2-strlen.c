@@ -7,6 +7,13 @@
 * Return: returns length of the string
 */
 int _strlen(char *s)
-}
-return (strlen(s));
+
+{
+char *str;
+int len;
+
+str = "Holberton!";
+len = _strlen(str);
+printf("%d\n", len);
+return (0);
 }
