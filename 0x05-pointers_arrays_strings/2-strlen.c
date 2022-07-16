@@ -7,15 +7,11 @@
 */
 int _strlen(char *s)
 {
-char *str;
 int len;
 
 for (; *s != '\0'; s++)
 {
 len += 1;
 }
-str = "Holberton!";
-len = _strlen(str);
-printf("%d\n", len);
-return (0);
+return (len);
 }
