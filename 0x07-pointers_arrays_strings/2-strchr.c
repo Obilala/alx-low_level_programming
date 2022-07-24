@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
 * _strchr -> string character
@@ -9,15 +8,15 @@
 */
 char *_strchr(char *s, char c)
 {
-int a = 0, b;
+int a = 0;
 
-while (s[a])
-a++;
-for (b = 0; b < a; b++)
+while (s[a] != '\0')
 {
-if (c == s[b])
-s += b;
-return (s);
+a++;
+if (s[a] == c)
+{
+return (&s[a]);
+}
 }
 return ('\0');
 }
