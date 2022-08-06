@@ -19,3 +19,12 @@ if (n == 0)
 {
 return (0);
 }
+
+for (i = 0 ; i < n ; i++)
+{
+number = va_arg(parameters, int);
+add = add + number;
+}
+va_end(parameters);
+return (add);
+}
