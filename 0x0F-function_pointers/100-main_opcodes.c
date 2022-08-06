@@ -28,7 +28,7 @@ printf("%02hhx", *((char *)main + count));
 if (count < atoiarg[1] - 1)
 printf(" ");
 else
-printf("\n")
+printf("\n");
 }
 return (0);
 }
