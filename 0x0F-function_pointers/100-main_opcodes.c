@@ -15,10 +15,21 @@ if (argc != 2)
 printf("Error\n");
 exit(1);
 }
-if (atoi(argv[1]) < 0)
+
+bytes = atoi(arg[1])
+if (bytes < 0)
 {
 printf("Error\n");
 exit(2);
+}
+
+for (count = 0; count < bytes; count++)
+{
+printf("%02hhx", *((char *)main + count));
+if (count < bytes - l)
+printf(" ");
+else
+printf("\n")
 }
 return (0);
 }
