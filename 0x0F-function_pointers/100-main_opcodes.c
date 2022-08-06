@@ -19,11 +19,6 @@ if (atoi(argv[1]) < 0)
 {
 printf("Error\n");
 exit(2);
-{
-if (count < atoi(arg[1]) - 1)
-printf(" ");
-else
-printf("\n");
 }
 return (0);
 }
