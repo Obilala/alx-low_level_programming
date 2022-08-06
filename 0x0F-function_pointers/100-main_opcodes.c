@@ -15,17 +15,12 @@ if (argc != 2)
 printf("Error\n");
 exit(1);
 }
-
-if (atoiarg[1] < 0)
+if (atoi(argv[1]) < 0)
 {
 printf("Error\n");
 exit(2);
-}
-
-for (count = 0; count < atoiarg[1]; count++)
 {
-printf("%02hhx", *((char *)main + count));
-if (count < atoiarg[1] - 1)
+if (count < atoi(arg[1]) - 1)
 printf(" ");
 else
 printf("\n");
