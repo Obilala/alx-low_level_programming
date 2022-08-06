@@ -16,17 +16,16 @@ printf("Error\n");
 exit(1);
 }
 
-bytes = atoi(arg[1])
-if (bytes < 0)
+if (atoiarg[1] < 0)
 {
 printf("Error\n");
 exit(2);
 }
 
-for (count = 0; count < bytes; count++)
+for (count = 0; count < atoiarg[1]; count++)
 {
 printf("%02hhx", *((char *)main + count));
-if (count < bytes - l)
+if (count < atoiarg[1] - 1)
 printf(" ");
 else
 printf("\n")
