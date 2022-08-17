@@ -1,21 +1,27 @@
+#include <stddef.h>
+#include <stdio.h>
 #include "lists.h"
 /**
-* list_len - the function that return the number of elements
-* in a linked list.
-* @h: the pointer that points to the struct.
-*
-* Return: number of elements
+* print - prints lists
+* @h: the list
+* @count: number of lists
+* Return: number of count
+*/
+size_t print(const list_t *h, int count)
+{
+if (h == NULL)
+return (count);
+h = h->next;
+count++;
+return (print(h, count));
+}
+
+/**
+* list_len - print all the elements of list_t
+* @h: the list passed
+* Return: number of nodes
 */
 size_t list_len(const list_t *h)
 {
-int elem;
-
-elem = 0;
-
-while (h != '\0')
-{
-h = h->next;
-elem++;
-}
-return (elem);
+return (print(h, 0));
 }
