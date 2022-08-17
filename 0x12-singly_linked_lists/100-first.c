@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "lists.h"
+
 /**
 * firstfunc - prints before the main function is executed.
 *
