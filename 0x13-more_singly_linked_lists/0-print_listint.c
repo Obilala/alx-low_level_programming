@@ -2,40 +2,20 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-* print - prints lists
-* @h: the list
-* @count: number of lists
-* Return: number of count
+* print_listint - this function prints all the elements of a list
+* @h: the pointer that points to the struct
+*
+* Return: the number of nodes
 */
-size_t print(const list_t *h, int count)
+size_t print_listint(const listint_t *h)
 {
-char *s;
-unsigned int len = 0;
-if (h == NULL)
-return (count);
-if (h->str == NULL)
-{
-s = "(nil)";
-len = 0;
-}
-else
-{
-s = h->str;
-len = h->len;
-}
-printf("[%d] ", len);
-printf("%s\n", s);
-h = h->next;
-count++;
-return (print(h, count));
-}
+int counter = 0;
 
-/**
-* print_listint - print all the elements of list_t
-* @h: the list passed
-* Return: number of nodes
-*/
-size_t print_listint(const list_t *h)
+while (h != '\0')
 {
-return (print(h, 0));
+printf("%d\n", h->n);
+h = h->next;
+counter++;
+}
+return (counter);
 }
