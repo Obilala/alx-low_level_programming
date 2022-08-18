@@ -2,21 +2,24 @@
 #include "lists.h"
 
 /**
-* free_listint2 - frees list
-* @head: head of linked list
+* free_listint2 - this function frees a list
+* @head: the pointer to the struct
 *
 * Return: the number of elements
 */
 void free_listint2(listint_t **head)
 {
-listint_t *tmp;
-listint_t *next;
-tmp = (*head);
-while (tmp != NULL)
+listint_t *fr;
+
+if (head == NULL)
 {
-next = tmp->next;
-free(tmp);
-tmp = next;
+return;
 }
-(*head) = NULL;
+
+while (*head != NULL)
+{
+fr = *head;
+*head = fr->next;
+free(fr);
+}
 }
