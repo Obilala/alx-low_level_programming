@@ -3,29 +3,45 @@
 #include "lists.h"
 
 /**
-* insert_nodeint_at_index - insert value on the given index
-* @head: head of the list
-* @idx: index the new node is inserted
-* @n: the value of the node
-* Return: new node address
+* insert_nodeint_at_index - inserts a new node at a given position
+* @head: the pointer to the struct
+* @n: integer in the struct
+* @idx: index of the list where the new node should be added
+*
+* Return: the address of the new node or NULL if it failed
 */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-listint_t *tmp;
-unsigned int count = 0;
-listint_t *newnode = malloc(sizeof(listint_t));
+listint_t *newnode, *move = *head;
+unsigned int index;
+
+newnode = malloc(sizeof(listint_t));
+
 if (newnode == NULL)
-return (NULL);
-tmp = (*head);
-while (tmp != NULL && count != idx)
 {
-count++;
-tmp = tmp->next;
-}
-if (tmp == NULL)
 return (NULL);
+}
+
 newnode->n = n;
-newnode->next = tmp->next;
-tmp->next = newnode;
+
+if (idx == 0)
+{
+newnode->next = *head;
+*head = newnode;
+}
+else
+{
+for (index = 0 ; index < idx - 1 ; index++)
+{
+move = move->next;
+if (move == NULL)
+{
+free(newnode);
+return (NULL);
+}
+}
+newnode->next = move->next;
+move->next = newnode;
+}
 return (newnode);
 }
