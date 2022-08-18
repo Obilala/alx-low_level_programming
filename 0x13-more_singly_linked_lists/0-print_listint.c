@@ -2,7 +2,11 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-* print_listint - this function prints all the elements of a list
+* struct listint_s - singly linked list
+* @n: int - (malloc'ed string)
+* @next: points to the next node
+* Description: singly linked list node structure
+* print - this function prints all the elements of a list
 * @h: the pointer that points to the struct
 *
 * Return: the number of nodes
