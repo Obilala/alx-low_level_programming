@@ -4,6 +4,8 @@
 /**
 * free_listint2 - frees list
 * @head: head of linked list
+*
+* Return: the number of elements
 */
 void free_listint2(listint_t **head)
 {
