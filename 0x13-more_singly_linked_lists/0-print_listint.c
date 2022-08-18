@@ -2,10 +2,9 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-* print - prints lists
+* struct listint_s - prints lists
 * @h: the list
 * @count: number of lists
-* @s: integer
 * Return: number of count
 */
 size_t print(const listint_t *h, int count)
