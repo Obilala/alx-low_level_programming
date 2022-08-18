@@ -9,11 +9,11 @@
 */
 size_t print(const listint_t *h, int count)
 {
-int h;
+int count;
 if (h == NULL)
 return (count);
-h = h->n;
-printf("%d\n", h);
+count = h->n;
+printf("%d\n", count);
 h = h->next;
 count++;
 return (print(h, count));
