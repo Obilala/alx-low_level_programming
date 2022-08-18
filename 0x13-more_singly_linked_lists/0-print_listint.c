@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-* printf - prints lists
-* @h: the list
+* print - prints lists
+* @h: the lists
 * @count: number of lists
 * Return: number of count
 */
@@ -20,7 +20,7 @@ return (print(h, count));
 }
 
 /**
-* print_listint - print all the elements of list_t
+* print_listint - print all the elements of listint_t
 * @h: the list passed
 *
 * Return: number of nodes
