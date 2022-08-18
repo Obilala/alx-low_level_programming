@@ -2,18 +2,18 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-* print - prints lists
+* printf - prints lists
 * @h: the list
 * @count: number of lists
 * Return: number of count
 */
 size_t print(const listint_t *h, int count)
 {
-int count;
+int s;
 if (h == NULL)
 return (count);
-count = h->n;
-printf("%d\n", count);
+s = h->n;
+printf("%d\n", s);
 h = h->next;
 count++;
 return (print(h, count));
