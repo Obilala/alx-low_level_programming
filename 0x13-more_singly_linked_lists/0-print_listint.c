@@ -5,7 +5,7 @@
 * print - prints lists
 * @h: the list
 * @count: number of lists
-* @const: struct listint_s
+* @next: points to the next node
 * Return: number of count
 */
 size_t print(const listint_t *h, int count)
