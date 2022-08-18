@@ -9,6 +9,7 @@
 */
 size_t print(const listint_t *h, int count)
 {
+int h;
 if (h == NULL)
 return (count);
 h = h->n;
