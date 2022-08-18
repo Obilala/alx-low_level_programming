@@ -2,16 +2,12 @@
 #include <stdio.h>
 #include "lists.h"
 /**
-* struct listint_s - singly linked list
-* @n: int - (malloc'ed string)
-* @next: points to the next node
-* Description: singly linked list node structure
-* print - this function prints all the elements of a list
-* @h: the pointer that points to the struct
-*
-* Return: the number of nodes
+* print - prints lists
+* @h: the list
+* @count: number of lists
+* Return: number of count
 */
-size_t print(const listint_t *h, int count)
+size_s print(const listint_s *h, int count)
 {
 int s;
 if (h == NULL)
