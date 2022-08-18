@@ -1,20 +1,27 @@
+#include <stddef.h>
+#include <stdio.h>
 #include "lists.h"
+/**
+* print - prints lists
+* @h: the list
+* @count: number of lists
+* Return: number of count
+*/
+size_t print(const listint_t *h, int count)
+{
+if (h == NULL)
+return (count);
+h = h->next;
+count++;
+return (print(h, count));
+}
 
 /**
 * listint_len - print all the elements of list_t
-* @h: head of the list
-*
-* Return: the number of elements
+* @h: the list passed
+* Return: number of nodes
 */
-size_t listint_len(const list_t *h)
+size_t listint_len(const listint_t *h)
 {
-const listint_t *cursor = h;
-size_t count = 0;
-
-while (cursor != NULL)
-{
-count += 1;
-cursor = cursor->next;
-}
-return (count);
+return (print(h, 0));
 }
