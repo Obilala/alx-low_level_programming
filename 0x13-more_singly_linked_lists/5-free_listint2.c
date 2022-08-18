@@ -16,5 +16,5 @@ next = tmp->next;
 free(tmp);
 tmp = next;
 }
-*head = NULL;
+(*head) = NULL;
 }
